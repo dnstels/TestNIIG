@@ -1,0 +1,14 @@
+C:\Users\dn.simonov.64\source\repos\test_NIIGaz\bin\Debug\test_NIIGaz.exe.config
+C:\Users\dn.simonov.64\source\repos\test_NIIGaz\bin\Debug\test_NIIGaz.exe
+C:\Users\dn.simonov.64\source\repos\test_NIIGaz\bin\Debug\test_NIIGaz.pdb
+C:\Users\dn.simonov.64\source\repos\test_NIIGaz\obj\Debug\test_NIIGaz.csprojAssemblyReference.cache
+C:\Users\dn.simonov.64\source\repos\test_NIIGaz\obj\Debug\test_NIIGaz.csproj.CoreCompileInputs.cache
+C:\Users\dn.simonov.64\source\repos\test_NIIGaz\obj\Debug\test_NIIGaz.exe
+C:\Users\dn.simonov.64\source\repos\test_NIIGaz\obj\Debug\test_NIIGaz.pdb
+C:\Users\user\source\repos\test_NIIGaz\bin\Debug\test_NIIGaz.exe.config
+C:\Users\user\source\repos\test_NIIGaz\bin\Debug\test_NIIGaz.exe
+C:\Users\user\source\repos\test_NIIGaz\bin\Debug\test_NIIGaz.pdb
+C:\Users\user\source\repos\test_NIIGaz\obj\Debug\test_NIIGaz.csprojAssemblyReference.cache
+C:\Users\user\source\repos\test_NIIGaz\obj\Debug\test_NIIGaz.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\test_NIIGaz\obj\Debug\test_NIIGaz.exe
+C:\Users\user\source\repos\test_NIIGaz\obj\Debug\test_NIIGaz.pdb
