@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace test_NIIGaz
 {
@@ -34,12 +31,17 @@ namespace test_NIIGaz
             
             Console.WriteLine("{0}", pril_3);
             Console.WriteLine("NexLiterel: {0} ", pril_3.getNexLit());
-            pril_3.lit = "ё23";
+            pril_3.lit = "#%^";
             Console.WriteLine("{0}", pril_3);
+            pril_3.getNexLit();
             pril_3.getNexLit();
             Console.WriteLine("{0}", pril_3);
             Console.WriteLine("\n");
-            
+            var app = (Attachment)"Приложение й";
+            Console.WriteLine("{0}", app);
+            app.getNexLit();
+            app.getNexLit();
+            Console.WriteLine("{0}", app);
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
         }
@@ -66,16 +68,13 @@ namespace test_NIIGaz
                 if (j == 0) j++;
                 this.lit = j.ToString();
             }
-            else if (this.lit.Length > 1)
+            else if (this.lit.Length > 1 && this.lit != "Приложение")
                 this.lit = Char.ToString(this.lit.First());
+            //else this.lit = "А";
 
         }
         public String getNexLit()// 2. метод для присвоения следующего номера приложения. Например, из «Приложения Б», получит «Приложение В» и т.д.
         {
-            String str = this.ToString().Trim().Trim('"');
-            str = str.Trim().Trim('-');
-            string[] split = str.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-            this.lit = split[1];
             Char vabc = abc();
             if (vabc == 'r')
             {
@@ -92,7 +91,7 @@ namespace test_NIIGaz
                 this.lit = Char.ToString('A');
                 return this.lit;
             }
-            else if (vabc != 'c')
+            else if (vabc == 'e')
             {
                 char ch = getLit();
 
@@ -116,7 +115,7 @@ namespace test_NIIGaz
                     this.lit = j.ToString();
                     return this.lit;
                 }
-            this.lit="Ошибка";
+            this.lit="А";
             return this.lit;
         }
         public bool isPass()
@@ -170,6 +169,7 @@ namespace test_NIIGaz
         }
         public Char abc()
         {
+            if(this.lit=="Ё" || this.lit == "ё") { return 'r'; }
             if (Int32.TryParse(this.lit, out int j))
                 return 'c';
             else
@@ -193,7 +193,7 @@ namespace test_NIIGaz
         }
         public override string ToString()//1.При преобразовании в строку возвращает текст, удовлетворяющий требованиям.
         {
-            if (lit == null) this.lit = "А";
+            if (lit == null || abc()=='\0') this.lit = "А";
             if (Int32.TryParse(this.lit, out int j))
             {
                 if (j < 0) j *= (-1);
@@ -209,9 +209,17 @@ namespace test_NIIGaz
             }
             else
             {
-                this.lit=getNexLit();
+                //this.lit=getNexLit();
+                getNexLit();
                 return "\"Приложение " + this.lit.ToUpper() + "\"";
             }
+        }
+
+        public static explicit operator Attachment(string v)//3. Может быть получена из строки вида «Приложение А» и т.п.
+        {
+            Attachment d = new Attachment(v);
+            return d;
+            //throw new NotImplementedException();
         }
     }
 }
